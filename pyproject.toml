@@ -4,7 +4,13 @@ version = "0.1.0"
 description = ""
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "langchain>=1.1.0",
+    "langchain-openai>=1.1.0",
+    "openai>=2.8.1",
+    "python-dotenv>=1.2.1",
+    "weave[scorers]>=0.52.20",
+]
 
 [tool.mypy]
 strict = true
@@ -12,3 +18,8 @@ strict = true
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = ["D", "ANN", "TRY", "EM", "FA", "SIM108", "S101", "RET505", "TCH002"]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+]
